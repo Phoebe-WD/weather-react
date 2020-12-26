@@ -1,15 +1,23 @@
+import React from "react";
+import "./styles.css";
+import Header from "./Header";
+import Search from "./Search";
+import CurrentTemperature from "./CurrentTemperature";
+import TimeForecast from "./TimeForecast";
+import Footer from "./Footer";
 
-import './App.css';
-import Weather from "./Weather";
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Weather app</h1>
-        <Weather />
-      </header>
+      <Header />
+      <div className="container">
+        <Search />
+        <div className="row info">
+          <CurrentTemperature />
+          <TimeForecast />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;

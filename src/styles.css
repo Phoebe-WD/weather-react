@@ -1,0 +1,20 @@
+body {
+  font-family: "Dosis", sans-serif;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 700px;
+  background-image: url(https://i.imgur.com/b2Rp3tw.jpg);
+  align-items: center;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #070d59;
+}
+.row {
+  margin-top: 10px;
+  align-items: center;
+}

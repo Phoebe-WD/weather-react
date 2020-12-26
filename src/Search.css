@@ -1,0 +1,18 @@
+.Search .search-engine {
+  padding: 10px 15px 0 15px;
+}
+.Search .search-col {
+  display: block;
+  margin: 0 auto;
+}
+
+.Search input[type="search"],
+input[type="submit"] {
+  margin-top: 10px;
+  background: lightblue;
+}
+
+.Search input[type="submit"] {
+  color: #070d59;
+  border: none;
+}

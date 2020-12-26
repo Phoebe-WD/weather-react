@@ -1,0 +1,67 @@
+.CurrentTemperature h2,
+h3,
+h4 {
+  color: white;
+}
+
+.CurrentTemperature .currently {
+  text-align: center;
+}
+.CurrentTemperature .currently-date,
+.currently {
+  margin: 10px 15px;
+}
+.CurrentTemperature h3,
+.city {
+  text-align: center;
+}
+.CurrentTemperature .currently-city {
+  font-weight: bold;
+}
+
+.CurrentTemperature .fa-wind,
+.fa-water {
+  font-size: 30px;
+  color: #070d59;
+}
+
+.CurrentTemperature .prec {
+  position: relative;
+  top: -16px;
+  text-align: center;
+}
+.CurrentTemperature .temp-change {
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 65px;
+}
+
+.CurrentTemperature .weather {
+  position: relative;
+  margin-top: 0px;
+  top: -32px;
+  text-transform: capitalize;
+  font-size: 25px;
+  color: white;
+}
+.CurrentTemperature .img-today {
+  position: relative;
+  top: -16px;
+  display: block;
+  margin: 0 auto;
+}
+.CurrentTemperature .units {
+  position: relative;
+  font-size: 25px;
+  top: -30px;
+}
+
+.CurrentTemperature .active {
+  color: white;
+  cursor: default;
+}
+
+.CurrentTemperature .active:hover {
+  text-decoration: none;
+  color: white;
+}
