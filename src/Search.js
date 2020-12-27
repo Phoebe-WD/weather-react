@@ -29,7 +29,7 @@ export default function Search() {
             <input
               type="submit"
               value="Search 🌎"
-              className="btn search-submit"
+              className="btn search-submit "
             />
           </div>
           <div class="col-3">

@@ -13,7 +13,7 @@ export default function App() {
       <div className="container">
         <Search />
         <div className="row info">
-          <CurrentTemperature />
+          <CurrentTemperature defaultCity="Berlin" />
           <TimeForecast />
         </div>
         <Footer />
