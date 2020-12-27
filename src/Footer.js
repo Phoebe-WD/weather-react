@@ -6,13 +6,13 @@ export default function Footer() {
     <div className="Footer">
       <footer>
         Made by{" "}
-        <a href="https://www.linkedin.com/in/phoebe-wilckens/" className="name">
+        <a href="https://www.linkedin.com/in/phoebe-wilckens/" className="name" target="_blank" rel="noreferrer">
           Phoebe W.
         </a>
         <br />
         <a
           href="https://github.com/Phoebe-WD/weather-react"
-          className="source-code"
+          className="source-code" target="_blank" rel="noreferrer"
         >
           open-source code
         </a>
