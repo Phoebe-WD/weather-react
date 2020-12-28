@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./CurrentTemperature.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function CurrentTemperature(props) {
  
@@ -15,7 +16,7 @@ export default function CurrentTemperature(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       iconUrl: "https://openweathermap.org/img/wn/10d@2x.png",
-      date: "Wednesday 13:00"
+      date: new Date(response.data.dt * 1000)
     })
    
   }
@@ -25,7 +26,9 @@ return (
       <div className="clearfix weather-temperature">
         <h2 className="city currently-city"> {weatherData.city}</h2>
         <h3>
-          <span className="currently-date"> {weatherData.date}</span> <br />
+         
+          <FormattedDate date={weatherData.date}/>
+          <br />
         </h3>
         <div className="currently">
           <h3>
