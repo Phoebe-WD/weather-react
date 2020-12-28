@@ -1,6 +1,7 @@
 import React from "react";
 import "./CurrentTemperature.css";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function CurrentTemperature(props) {
  
@@ -27,11 +28,7 @@ return (
               </a>
             </span>
           </h3>
-          <img
-            src={props.info.iconUrl}
-            alt={props.info.description}
-            className="img-today"
-          />
+          <WeatherIcon code={props.info.icon} alt={props.info.description}/>
           <span className="weather"> {props.info.description}</span>
           <h4 className="prec">
             <i className="fas fa-water"></i> Humidity:
