@@ -13,7 +13,9 @@ export default function CurrentTemperature(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
       humidity: response.data.main.humidity,
-      description: response.data.weather[0].description
+      description: response.data.weather[0].description,
+      iconUrl: "https://openweathermap.org/img/wn/10d@2x.png",
+      date: "Wednesday 13:00"
     })
    
   }
@@ -23,7 +25,7 @@ return (
       <div className="clearfix weather-temperature">
         <h2 className="city currently-city"> {weatherData.city}</h2>
         <h3>
-          <span className="currently-date"> Wednesday 13:00</span> <br />
+          <span className="currently-date"> {weatherData.date}</span> <br />
         </h3>
         <div className="currently">
           <h3>
@@ -40,7 +42,7 @@ return (
             </span>
           </h3>
           <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
+            src={weatherData.iconUrl}
             alt={weatherData.description}
             className="img-today"
           />
