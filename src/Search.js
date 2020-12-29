@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Search.css";
+import "./styles.css";
 import axios from "axios";
 import CurrentTemperature from "./CurrentTemperature";
 import TimeForecast from "./TimeForecast";
+import Footer from "./Footer";
 
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -18,8 +20,27 @@ export default function Search(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
+      timezone: response.data.timezone,
     })
    
+  }
+  let backgroundClass = "container";
+  let time = new Date();
+  let localTime = time.getTimezoneOffset() * 60;
+  time.setSeconds(time.getSeconds() + localTime + weatherData.timezone);
+  let hours = time.getHours();
+  if (hours >= 20 && hours < 24) {
+    backgroundClass = "container evening"
+  } 
+  if (hours >=5 && hours < 17){
+    backgroundClass = "container morning";
+  }
+
+  if (hours >= 17 && hours < 20){
+    backgroundClass = "container afternoon"
+  }
+  if (hours >= 0 && hours < 5){
+    backgroundClass = "container evening";
   }
 
   function searchCity(){
@@ -39,6 +60,7 @@ export default function Search(props) {
 
   if (weatherData.ready){
   return (
+     <div className={backgroundClass}>
     <div className="Search">
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="row search-engine">
@@ -65,6 +87,8 @@ export default function Search(props) {
           <CurrentTemperature info={weatherData} />
           <TimeForecast city={weatherData.city} />
         </div>
+    </div>
+       <Footer />
     </div>);
      } else {
       searchCity();

@@ -5,9 +5,28 @@
   display: block;
   margin: 0 auto;
 }
+.container {
+  max-width: 700px;
+  align-items: center;
+  border-radius: 20px;
+}
 
-.Search input[type="search"],
-input[type="submit"] {
+.container .evening {
+  background-image: url(https://i.imgur.com/b2Rp3tw.jpg);
+}
+.container .morning {
+  background-image: url(https://i.imgur.com/b2Rp3tw.jpg);
+}
+.container .afternoon {
+  background-image: url(https://i.imgur.com/b2Rp3tw.jpg);
+}
+
+.Search input[type="search"] {
+  margin-top: 10px;
+  background: white;
+}
+
+.Search input[type="submit"] {
   margin-top: 10px;
   background: lightblue;
 }
