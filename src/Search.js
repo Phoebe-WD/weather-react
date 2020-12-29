@@ -17,7 +17,7 @@ export default function Search(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      date: new Date(response.data.dt * 1000)
+      date: new Date(response.data.dt * 1000),
     })
    
   }
@@ -63,7 +63,7 @@ export default function Search(props) {
       </form>
         <div className="row info">
           <CurrentTemperature info={weatherData} />
-          <TimeForecast />
+          <TimeForecast city={weatherData.city} />
         </div>
     </div>);
      } else {

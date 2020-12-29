@@ -12,9 +12,7 @@
   padding: 0;
 }
 
-.TimeForecast .temps,
-.temp-max,
-.temp-min {
+.TimeForecast .temps {
   color: white;
   font-weight: bold;
 }
@@ -26,6 +24,8 @@
   color: white;
 }
 
-.TimeForecast ul li img {
+.TimeForecast ul li canvas {
   display: inline-block;
+  width: 52px;
+  height: 52px;
 }
