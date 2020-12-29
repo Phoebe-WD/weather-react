@@ -2,6 +2,7 @@ import React from "react";
 import "./CurrentTemperature.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function CurrentTemperature(props) {
  
@@ -14,20 +15,10 @@ return (
           <FormattedDate date={props.info.date}/>
           <br />
         </h3>
+
         <div className="currently">
-          <h3>
-            <span className="temp-change">{Math.round(props.info.temperature)}</span>
-            <span className="units">
-              º
-              <a href="/" className="celsius active">
-                C
-              </a>{" "}
-              |
-              <a href="/" onClick={showFahrenheit} className="fahrenheit">
-                F
-              </a>
-            </span>
-          </h3>
+            <WeatherTemperature celsius={props.info.temperature}/>
+
           <WeatherIcon code={props.info.icon} alt={props.info.description}/>
           <span className="weather"> {props.info.description}</span>
           <h4 className="prec">
@@ -41,10 +32,5 @@ return (
       </div>
     </div> );
  
- 
-  function showFahrenheit(event) {
-    event.preventDefault();
 
-    alert("Convert to fahrenheit");
-  }
 }
