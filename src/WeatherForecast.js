@@ -11,7 +11,7 @@ export default function WeatherForecast(props){
     function temperature(){
         let tempMax = Math.round(props.data.main.temp_max);
         let tempMin = Math.round(props.data.main.temp_min);
-        return `${tempMax} / ${tempMin}`;
+        return `${tempMax}º / ${tempMin}º`;
     }
     return (
         <li>
