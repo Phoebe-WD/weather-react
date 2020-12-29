@@ -25,7 +25,7 @@ return (
             <i className="fas fa-water"></i> Humidity:
             <span className="humidity">{props.info.humidity}</span>% <br />
             <i className="fas fa-wind"></i> Wind:{" "}
-            <span className="wind">{props.info.wind}</span> km/h
+            <span className="wind">{Math.round(props.info.wind)}</span> km/h
             <br />
           </h4>
         </div>
