@@ -1,11 +1,11 @@
 .Footer footer {
+  margin-top: 8px;
   text-align: center;
-  color: #bbbbbb;
-  font-weight: bold;
+  color: white;
 }
 .Footer .name,
 .source-code {
-  color: #bbbbbb;
+  color: white;
 }
 
 .Footer .name:hover,

@@ -16,7 +16,7 @@ export default function TimeForecast(props) {
     <div className="TimeForecast col-12 container-forecast">
       <div className="clearfix forecast-container">
         <div className="row forecast">
-          {forecast.list.slice(0, 6).map(function (forecastItem) {
+          {forecast.list.slice(0, 4).map(function (forecastItem) {
             return (
             <WeatherForecast data={forecastItem} timezone={props.timezone}/>
             );

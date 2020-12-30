@@ -16,7 +16,7 @@ export default function WeatherForecast(props){
         return `${tempMax}º / ${tempMin}º`;
     }
     return (
-        <div className="col-2 forecast-info">
+        <div className="col-3 forecast-info">
             <h3>{hours()}</h3> {" "}
             <WeatherIcon code={props.data.weather[0].icon} alt={props.data.description}/>
             <span className="temps">

@@ -11,17 +11,19 @@
   border-radius: 20px;
 }
 
-.Search input[type="search"] {
-  margin-top: 10px;
-  background: #ecfbfc;
-}
-
+.Search input[type="search"],
 .Search input[type="submit"] {
-  margin-top: 10px;
+  margin-top: 30px;
   background: #ecfbfc;
 }
 
 .Search input[type="submit"] {
   color: #070d59;
   border: none;
+  border-radius: 6px;
+}
+.Search .form-control {
+  margin-left: 50px;
+  width: 86%;
+  border-radius: 6px;
 }

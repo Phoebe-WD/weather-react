@@ -7,8 +7,8 @@ export default function Footer() {
       <footer>
         Made by{" "}
         <a href="https://www.linkedin.com/in/phoebe-wilckens/" className="name" target="_blank" rel="noreferrer">
-          Phoebe W
-        </a> {" "} - {" "} 
+          Phoebe W -
+        </a> {" "}  {" "} 
         <a
           href="https://github.com/Phoebe-WD/weather-react"
           className="source-code" target="_blank" rel="noreferrer"

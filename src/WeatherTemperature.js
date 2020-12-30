@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CurrentTemperature.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherTemperature(props){
     const [unit, setUnit] = useState('celsius');
@@ -15,6 +16,7 @@ export default function WeatherTemperature(props){
     if (unit === "celsius"){
 return (
       <h3>
+        <WeatherIcon code={props.code} />
             <span className="temp-change">{Math.round(props.celsius)}</span>
             <span className="units">
               º
@@ -32,6 +34,7 @@ return (
         return (
           
       <h3>
+        <WeatherIcon code={props.code} />
             <span className="temp-change">{fahrenheitTemp}</span>
             <span className="units">
               º
