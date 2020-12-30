@@ -19,7 +19,6 @@ export default function Search(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      date: new Date(response.data.dt * 1000),
       timezone: response.data.timezone,
     })
    
@@ -74,10 +73,10 @@ export default function Search(props) {
               aria-describedby="validationTooltipUsernamePrepend"
             />
           </div>
-          <div class="col-3">
+          <div className="col-3">
             <input
               type="submit"
-              value="Search 🌎"
+              value="🔎"
               className="btn search-submit "
             />
           </div>
@@ -85,7 +84,7 @@ export default function Search(props) {
       </form>
         <div className="row info">
           <CurrentTemperature info={weatherData} />
-          <TimeForecast city={weatherData.city} />
+          <TimeForecast city={weatherData.city} timezone={weatherData.timezone}/>
         </div>
     </div>
        <Footer />

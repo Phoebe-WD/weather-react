@@ -11,24 +11,14 @@
   border-radius: 20px;
 }
 
-.container .evening {
-  background-image: url(https://i.imgur.com/b2Rp3tw.jpg);
-}
-.container .morning {
-  background-image: url(https://i.imgur.com/b2Rp3tw.jpg);
-}
-.container .afternoon {
-  background-image: url(https://i.imgur.com/b2Rp3tw.jpg);
-}
-
 .Search input[type="search"] {
   margin-top: 10px;
-  background: white;
+  background: #ecfbfc;
 }
 
 .Search input[type="submit"] {
   margin-top: 10px;
-  background: lightblue;
+  background: #ecfbfc;
 }
 
 .Search input[type="submit"] {

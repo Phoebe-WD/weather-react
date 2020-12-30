@@ -1,8 +1,14 @@
 .Footer footer {
-  text-align: end;
-  color: #070d59;
+  text-align: center;
+  color: #bbbbbb;
+  font-weight: bold;
 }
 .Footer .name,
 .source-code {
-  color: white;
+  color: #bbbbbb;
+}
+
+.Footer .name:hover,
+.source-code:hover {
+  color: #070d59;
 }

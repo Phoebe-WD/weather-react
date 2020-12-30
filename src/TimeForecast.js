@@ -13,17 +13,15 @@ export default function TimeForecast(props) {
 
   if (loaded && props.city === forecast.city.name){
     return (
-    <div className="TimeForecast col-6 container-forecast">
+    <div className="TimeForecast col-12 container-forecast">
       <div className="clearfix forecast-container">
-        <ul className="forecast">
-          <WeatherForecast data={forecast.list[0]} />
-          <br/>
-          <WeatherForecast data={forecast.list[1]} />
-          <br/>
-          <WeatherForecast data={forecast.list[2]} />
-          <br/>
-          <WeatherForecast data={forecast.list[3]} />
-        </ul>
+        <div className="row forecast">
+          {forecast.list.slice(0, 6).map(function (forecastItem) {
+            return (
+            <WeatherForecast data={forecastItem} timezone={props.timezone}/>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

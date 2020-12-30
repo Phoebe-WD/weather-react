@@ -1,31 +1,30 @@
 .TimeForecast .forecast-container {
-  margin: 20px 0;
+  margin: 35px 0;
   width: auto;
-  text-align: center;
-  align-items: center;
-}
-
-.TimeForecast ul {
-  text-decoration: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .TimeForecast .temps {
-  color: white;
+  color: #bbbbbb;
   font-weight: bold;
+  display: inline-block;
+  text-align: center;
 }
 
-.TimeForecast li h3 {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-}
-
-.TimeForecast ul li canvas {
-  display: inline-block;
+.TimeForecast .forecast canvas {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
   width: 52px;
   height: 52px;
+}
+
+.TimeForecast .forecast-info {
+  text-align: center;
+}
+
+.TimeForecast .forecast .forecast-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #bbbbbb;
+  text-align: center;
 }

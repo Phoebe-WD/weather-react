@@ -5,6 +5,8 @@ import "./TimeForecast.css";
 export default function WeatherForecast(props){
     function hours(){
         let date = new Date(props.data.dt * 1000);
+        let localTime = date.getTimezoneOffset() * 60;
+        date.setSeconds(date.getSeconds() + localTime + props.timezone);
         let hours = date.getHours();
         return `${hours}:00`;
     }
@@ -14,12 +16,12 @@ export default function WeatherForecast(props){
         return `${tempMax}º / ${tempMin}º`;
     }
     return (
-        <li>
+        <div className="col-2 forecast-info">
             <h3>{hours()}</h3> {" "}
             <WeatherIcon code={props.data.weather[0].icon} alt={props.data.description}/>
             <span className="temps">
               {temperature()}
             </span>
-        </li>
+        </div>
     );
 }

@@ -30,6 +30,7 @@ return (
     } else {
         let fahrenheitTemp = Math.round((props.celsius * 9/5) + 32); 
         return (
+          
       <h3>
             <span className="temp-change">{fahrenheitTemp}</span>
             <span className="units">
@@ -42,7 +43,8 @@ return (
                 F
               </a>
             </span>
-          </h3>);
+          </h3>
+          );
     }
 
 }
