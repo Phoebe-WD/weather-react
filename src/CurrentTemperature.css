@@ -21,7 +21,7 @@
 .CurrentTemperature .fa-wind,
 .fa-water {
   font-size: 20px;
-  color: #a5ecd7;
+  color: #333333;
 }
 
 .CurrentTemperature .prec {
@@ -54,7 +54,7 @@
 
 .CurrentTemperature .active {
   cursor: default;
-  color: skyblue;
+  color: #333333;
 }
 
 .CurrentTemperature .active:hover {
